@@ -1,0 +1,12 @@
+{% extends "_base.html" %} {% block content %}
+<form action="/api/links" method="post" id="links-form">
+  <fieldset>
+    <label for="url">Add URL:</label>
+    <input type="url" placeholder="https://" name="url" id="url" />
+    <button type="submit">Add</button>
+  </fieldset>
+</form>
+
+<table id="list"></table>
+<script src="./bookmarks.js"></script>
+{% endblock %}

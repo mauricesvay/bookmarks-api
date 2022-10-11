@@ -1,0 +1,27 @@
+{% extends "_base.html" %} {% block content %}
+<p>Manage your bookmarks!</p>
+
+<div>
+  <progress id="secScanProgress" max="100" value="0"></progress><br />
+  <button type="button" id="secScan">💣 Security scan</button>
+  <button type="button" id="authSecScan">
+    💣 Security scan (authenticated)
+  </button>
+</div>
+
+<script src="attack.js"></script>
+<script>
+  const secScanButton = document.querySelector("#secScan");
+  secScanButton.addEventListener("click", async () => {
+    await securityScan();
+    alert("Scan completed");
+  });
+
+  const authSecScanButton = document.querySelector("#authSecScan");
+  authSecScanButton.addEventListener("click", async () => {
+    await authenticatedSecurityScan();
+    alert("Authenticated Scan completed");
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmarks</title>
+    {% include "partials/css.html" %} {% include "partials/head.html" %}
+  </head>
+  <body>
+    <header>
+      <h1>Bookmarks</h1>
+      <nav>
+        <a href="/">Home</a> /
+        <a href="/bookmarks">Bookmarks</a>
+      </nav>
+    </header>
+    {% block content %}{% endblock %}
+  </body>
+</html>
